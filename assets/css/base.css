@@ -1,58 +1,94 @@
 @import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,400;0,700;1,300;1,400;1,700&display=swap');
-:root{
-   --color-main : #103178;
-   --color-highlight:#ffc800;
-   --color-text : #5b6c8f;
 
-   --bg-one:#f0f2f5;
-   --font : 'Inria Serif', serif;
+:root {
+   --color-main: #103178;
+   --color-highlight: #ffc800;
+   --color-text: #5b6c8f;
+
+   --bg-one: #f0f2f5;
+   --font: 'Inria Serif', serif;
 }
 
-body{
+* {
+   box-sizing: border-box;
+}
+
+body {
    font-family: var(--font);
 }
+
 a {
    text-decoration: none;
 }
+
 /* container */
-.container{
+.container {
    max-width: 1140px;
    margin-left: auto;
    margin-right: auto;
 }
 
+@media (max-width: 1199.98px) {
+   .container {
+      max-width: 960px;
+   }
+}
+
+@media (max-width: 991.98px) {
+   .container {
+      max-width: 720px;
+   }
+}
+
+@media (max-width: 767.98px) {
+   .container {
+      max-width: 540px;
+   }
+}
+
+@media (max-width: 575.98px) {
+   .container {
+      max-width: 100%;
+      padding: 0 15px;
+   }
+}
+
 /* end container */
 
 /* button */
-.button{
+.button {
    background: gray;
    display: inline-flex;
    color: #fff;
-   padding :12px 25px;
+   padding: 12px 25px;
    border-radius: 45px;
    font-size: 18px;
    border: 2px solid gray;
    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    width: auto;
-    justify-content: center;
-    align-items: center;
+   transition: all 0.3s ease-in-out;
+   width: auto;
+   justify-content: center;
+   align-items: center;
 }
+
 .button-ani:hover i {
    padding: 6px 30px 6px 15px;
 }
-.button-ani i{
+
+.button-ani i {
    transition: opacity 0.3s, transform 0.3s;
    opacity: 0;
    width: 0;
    transition: all 0.5s;
 }
-.button-ani:hover i{
-   transition-delay:0.08s ;
+
+.button-ani:hover i {
+   transition-delay: 0.08s;
    opacity: 1;
    transform: translateX(7px);
 }
-.button:hover{
+
+.button:hover {
    color: gray;
    background: #fff;
 }
@@ -63,10 +99,12 @@ a {
    border-color: var(--color-highlight);
    transition: all 0.5s;
 }
-.button-highlight:hover{
+
+.button-highlight:hover {
    color: var(--color-highlight);
    background: #fff;
 }
+
 .button-main {
    background: var(--color-main);
    color: #fff;
@@ -75,61 +113,102 @@ a {
 }
 
 .button-main:hover {
-   color: var(--color-main)!important;
+   color: var(--color-main) !important;
    background: #fff;
    font-size: 20px;
 }
+
 .button-green {
-   background: green;
+   background: #13a05d;
    color: #fff;
    transition: all 0.5s;
    margin-top: 10px;
-   border-color: green;
+   border-color: #13a05d;
 }
 
 .button-green:hover {
-   color: green !important;
+   color: #13a05d !important;
    background: #fff;
    font-size: 20px;
 }
-.button-email{
-   background: #fff ;
+
+.button-email {
+   background: #fff;
    color: var(--color-main);
    font-weight: 600;
    transition: all 0.5s;
 }
-.button-email:hover{
+
+.button-email:hover {
    background: var(--color-main);
    color: #fff;
 }
+
+@media (max-width:575.98px) {
+   .button {
+      padding: 6px 20px;
+      font-size: 14px;
+   }
+
+   .button-ani:hover {
+      padding: 3px 20px 3px 20px;
+   }
+}
+
 /* end button */
 /* color */
-.color-main{
- color: var(--color-main) !important;
+.color-main {
+   color: var(--color-main) !important;
 }
-.color-highlight{
+
+.color-highlight {
    color: var(--color-highlight) !important;
 }
+
 /* Box head */
-.box-head{
+.box-head {
    margin-bottom: 30px;
    max-width: 600px;
 }
-.box-head .inner-title{
+
+.box-head .inner-title {
    font-size: 46px;
    font-weight: 600;
    color: var(--color-main);
 }
-.box-head.inner-center{
+
+.box-head.inner-center {
    margin-left: auto;
    margin-right: auto;
    text-align: center;
 }
+
 .box-head.inner-small .inner-title {
    font-size: 36px;
 }
-.box-head .inner-desc{
+
+.box-head .inner-desc {
    font-size: 22px;
    color: var(--color-text);
    margin-top: 10px;
+}
+
+@media (max-width:767.98px) {
+   .box-head .inner-title {
+      font-size: 36px;
+   }
+
+   .box-head .inner-desc {
+      font-size: 20px;
+   }
+}
+
+@media (max-width:575.98px) {
+   .box-head .inner-title {
+      font-size: 32px;
+   }
+
+   .box-head .inner-desc {
+      font-size: 18px;
+   }
 }
